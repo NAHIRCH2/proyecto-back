@@ -1,0 +1,15 @@
+version: "3"
+services:
+  db-crud:
+    container_name: db-crud
+    image: postgres:15.2
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ms_crud
+      POSTGRES_USER: java
+      POSTGRES_PASSWORD: java123
+    ports:
+      - 5431:5431
+    expose:
+      - 5431
+    command: -p 5431
